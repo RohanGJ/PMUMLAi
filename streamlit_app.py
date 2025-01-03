@@ -36,3 +36,13 @@ with st.expander('**Vibration Inputs**'):
 MID    = st.slider('Machine ID',0,99,1)
 AGE    = st.slider('Age',0,20,1)
 
+Model = open("RFCV1.pkl","rb")
+model = pickle.load(Model)
+
+#FinLis = {
+#     
+#}
+
+#DF = pd.DataFrame(FinLis)
+
+#model.predict()
