@@ -12,4 +12,4 @@ with st.expander('**Data Frame**'):
   
 with st.expander('**INPUT**'):
   st.write('Inputs to Model')
-  age    = st.selectbox('AGE of machine',list(range(0,19))
+  age    = st.selectbox('AGE of machine',list(range(0,19)))
