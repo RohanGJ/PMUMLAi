@@ -39,3 +39,5 @@ with st.expander('**Vibration Inputs**'):
   VBsd    = st.slider('Standard Deviation (Vibration)',2.00,14.00,5.00)
 
 MID    = st.slider('Machine ID',0,99,1)
+AGE    = st.slider('Age',0,20,1)
+
