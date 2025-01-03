@@ -2,8 +2,3 @@ streamlit>=1.26.0
 numpy 
 pandas
 scikit-learn
-tqdm
-seaborn
-warnings
-os
-matplotlib
