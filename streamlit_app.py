@@ -12,9 +12,13 @@ with st.expander('**Data Frame**'):
   
 with st.expander('**Error Inputs**'):
   st.write('Provide Error Counts for each attributes')
-  age    = st.selectbox('AGE of machine',list(range(0,19)))
   E1C    = st.selectbox('Error1Count',[0,1,2])
   E2C    = st.selectbox('Error2Count',[0,1,2])
   E3C    = st.selectbox('Error3Count',[0,1,2])
   E4C    = st.selectbox('Error4Count',[0,1,2])
   E5C    = st.selectbox('Error5Count',[0,1,2])
+  
+with st.expander('**Voltage Inputs**'):
+  st.write('Provide Mean and SD of Voltage')
+  Vmean  = st.slider('Mean Voltage',150.00,220.00,170.00)
+  Vsd    = st.slider('Standard Deviation Voltage',6.50,27.50,14.50)
