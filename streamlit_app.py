@@ -7,5 +7,5 @@ st.info('This MODEL predicts wheather an equipment is about to fail in the near 
 
 with st.expander('**Data Frame**'):
   st.write('Feature Dataset')
-  DF = pd.read_csv("https://drive.google.com/file/d/1KdbROD9dBgTfBvP1roISbnZ_JyAR9OQ5/view?usp=drive_link")
+  DF = pd.read_csv("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/features1.csv")
   DF
