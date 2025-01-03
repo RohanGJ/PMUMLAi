@@ -4,14 +4,10 @@ import pickle
 import requests 
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-LE = LabelEncoder()
-Scaler = StandardScaler()
-xtr = pd.read_csv("https://github.com/RohanGJ/PMUMLAi/raw/refs/heads/master/xtr.csv",header = None, sep = ',')
-Scaler.fit(xtr)
 
 def load_model_from_github(url):
     response = requests.get(url)
-    response.raise_for_status()  # Ensure the request was successful
+    response.raise_for_status()
     model = pickle.loads(response.content)
     return model
 
@@ -22,7 +18,13 @@ model = load_model_from_github(pickle_url)
 st.title('PREVENTIVE MAINTANANCE USING ML')
 
 st.info('This MODEL predicts wheather an equipment is about to fail in the near future.')
- 
+
+E1C,E2C,E3C,E4C,E5C = 0,0,0,0,0
+
+Vmean,Rmean,Pmean,VBmean = 0.00,0.00,0.00,0.00
+
+Vsd,Rsd,Psd,VBsd = 0.00,0.00,0.00,0.00
+
 with st.expander('**Error Inputs**'):
   st.write('Provide Error Counts for each attributes')
   E1C    = st.selectbox('Error1Count',[0,1,2])
@@ -53,34 +55,40 @@ with st.expander('**Vibration Inputs**'):
 
 MID    = st.slider('Machine ID',0,99,1)
 AGE    = st.slider('Age',0,20,1)
-MODEL  = st.selectbox('Model', [range(0,100)])
+modrang = list(range(0,100))
+MODEL  = st.selectbox('Model', modrang)
+
 FinLis = {
-    'machineID'    : MID,
-    'voltmean'     : Vmean,
-    'rotatemean'   : Rmean,
-    'pressuremean' : Pmean,
-    'vibrationmean': VBmean, 
-    'voltsd'       : Vsd,
-    'rotatesd'     : Rsd, 
-    'pressuresd'   : Psd, 
-    'vibrationsd'  : VBsd,
-    'error1count'  : E1C,
-    'error2count'  : E2C, 
-    'error3count'  : E3C, 
-    'error4count'  : E4C, 
-    'error5count'  : E5C,
-    'model'        : MODEL, 
-    'age'          : AGE, 
-}
+      'machineID'    : [MID],
+      'voltmean'     : [Vmean],
+      'rotatemean'   : [Rmean],
+      'pressuremean' : [Pmean],
+      'vibrationmean': [VBmean], 
+      'voltsd'       : [Vsd],
+      'rotatesd'     : [Rsd], 
+      'pressuresd'   : [Psd], 
+      'vibrationsd'  : [VBsd],
+      'error1count'  : [E1C],
+      'error2count'  : [E2C], 
+      'error3count'  : [E3C], 
+      'error4count'  : [E4C], 
+      'error5count'  : [E5C],
+      'model'        : [MODEL], 
+      'age'          : [AGE], 
+  }
+
 STDF = pd.DataFrame(FinLis)
 
-STDF = Scaler.fit_transform(STDF)
+if st.button("See your Inputs"):
+  
+  st.subheader("USER INPUTS :")
+  st.write(STDF)
 
-st.subheader("USER INPUTS :")
-st.write(STDF)
+STDF = STDF.values
+if st.button("Run Model"):
 
-st.subheader("Prediction : ")
-st.write(model.predict(STDF))
+  st.subheader("Prediction : ")
+  st.write(model.predict(STDF))
 
-st.subheader("Prediction Probability :")
-st.write(model.predict_proba(STDF))
+  st.subheader("Prediction Probability :")
+  st.write(model.predict_proba(STDF))
