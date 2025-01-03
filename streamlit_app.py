@@ -37,3 +37,5 @@ with st.expander('**Vibration Inputs**'):
   st.write('Provide Mean and SD of VBin')
   VBmean  = st.slider('Mean Vibration',35.00,65.00,40.00)
   VBsd    = st.slider('Standard Deviation (Vibration)',2.00,14.00,5.00)
+
+MID    = st.slider('Machine ID',0,99,1)
