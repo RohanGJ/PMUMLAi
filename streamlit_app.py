@@ -28,7 +28,7 @@ with st.expander('**Rotation Inputs**'):
   Rmean  = st.slider('Mean Rotation',260.00,500.00,450.00)
   Rsd    = st.slider('Standard Deviation (Rotation)',19.00,105.00,50.00)
 
-with st.expander('** Pressure Inputs**'):
+with st.expander('**Pressure Inputs**'):
   st.write('Provide Mean and SD of PRin')
   Pmean  = st.slider('Mean Pressure',90.00,155.00,100.00)
   Psd    = st.slider('Standard Deviation (Pressure)',4.00,29.00,9.50)
