@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import pickle
 st.title('PREVENTIVE MAINTANANCE USING ML')
 
 st.info('This MODEL predicts wheather an equipment is about to fail in the near future.')
