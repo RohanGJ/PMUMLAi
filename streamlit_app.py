@@ -114,15 +114,12 @@ col1.write(model.predict(STDF))
 
 col1.subheader("Prediction Probability :")
 col1.write(model.predict_proba(STDF))
-  
-lottie_pass = load_lottiefile(pass_logo_path)
-lottie_fail = load_lottiefile(fail_logo_path)
 
 with col2:
   st.info("STATUS")
   if pred[0] == 0:
-    st_lottie(lottie_pass, speed = 0.75, loop = False)
+    st_lottie(url_pass, speed = 0.75, loop = False)
   elif pred[0] == 1:
-   st_lottie(lottie_fail, speed = 0.75, loop = True, reverse = True) 
+   st_lottie(url_fail, speed = 0.75, loop = True, reverse = True) 
   else:
     st.info("Press Run model after selecting inputs")
