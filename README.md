@@ -6,7 +6,7 @@ Deploying ML
 Description of the app ...
 
 ## App Link
-[![Open App](https://pmumlai.streamlit.app)]
+[![Open App]](https://pmumlai.streamlit.app)
 
 ## GitHub Codespaces
 
