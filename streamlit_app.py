@@ -6,8 +6,8 @@ import requests
 from streamlit_lottie import st_lottie
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-fail_logo_url = urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/fail1.json")
-pass_logo_url = urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/pass.json")
+fail_logo_url = urllib.urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/fail1.json")
+pass_logo_url = urllib.urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/pass.json")
 pickle_url = "https://github.com/RohanGJ/PMUMLAi/raw/refs/heads/master/RFCV1.pkl"
 url_fail = json.loads(fail_logo_url.read())
 url_pass = json.loads(pass_logo_url.read())
