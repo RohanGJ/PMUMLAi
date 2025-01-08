@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import json
+import json, urllib
 import requests 
 from streamlit_lottie import st_lottie
 from sklearn.preprocessing import LabelEncoder, StandardScaler
