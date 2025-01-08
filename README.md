@@ -5,9 +5,8 @@ Deploying ML
 
 Description of the app ...
 
-## Demo App
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+## App Link
+[![Open App](https://pmumlai.streamlit.app)]
 
 ## GitHub Codespaces
 
