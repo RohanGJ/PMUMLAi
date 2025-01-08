@@ -12,7 +12,7 @@ pickle_url = "https://github.com/RohanGJ/PMUMLAi/raw/refs/heads/master/RFCV1.pkl
 url_fail = dict() 
 url_pass = dict()
 
-if url.status_code == 200: 
+if url_fail.status_code == 200 and url_pass.status_code == 200: 
     url_fail = fail_logo_url.json() 
     url_pass = pass_logo_url.json()
 else: 
