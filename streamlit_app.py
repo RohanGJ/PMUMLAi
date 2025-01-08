@@ -5,7 +5,7 @@ import json
 import requests 
 from urllib.request import urlopen
 from streamlit_lottie import st_lottie
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn import sklearn
 
 fail_logo_url = urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/JSON%20Files/fail1.json")
 pass_logo_url = urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/JSON%20Files/pass.json")
