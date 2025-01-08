@@ -6,14 +6,18 @@ import requests
 from streamlit_lottie import st_lottie
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-fail_logo_path = "D:/PMUI/fail1.json"
-pass_logo_path = "D:/PMUI/pass.json"
+fail_logo_url = "https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/fail1.json"
+pass_logo_url = "https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/pass.json"
 pickle_url = "https://github.com/RohanGJ/PMUMLAi/raw/refs/heads/master/RFCV1.pkl"
+url_fail = dict() 
+url_pass = dict()
 
-def load_lottiefile(filepath: str):
-  with open(filepath, "r") as f:
-    return json.load(f)
-
+if url.status_code == 200: 
+    url_fail = fail_logo_url.json() 
+    url_pass = pass_logo_url.json()
+else: 
+    print("Error in URL") 
+  
 def load_model_from_github(url):
   response = requests.get(url)
   response.raise_for_status()
