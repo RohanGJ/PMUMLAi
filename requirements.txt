@@ -3,4 +3,3 @@ streamlit_lottie
 pandas
 scikit-learn
 requests
-urllib
