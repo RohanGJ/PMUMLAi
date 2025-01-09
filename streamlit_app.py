@@ -9,7 +9,7 @@ from sklearn import sklearn
 
 fail_logo_url = urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/JSON%20Files/fail1.json")
 pass_logo_url = urlopen("https://raw.githubusercontent.com/RohanGJ/PMUMLAi/refs/heads/master/JSON%20Files/pass.json")
-pickle_url = "https://github.com/RohanGJ/PMUMLAi/raw/refs/heads/master/MODELS/MLPC.pkl"
+pickle_url = "https://github.com/RohanGJ/PMUMLAi/raw/refs/heads/master/MODELS/ETC1.pkl"
 url_fail = json.loads(fail_logo_url.read())
 url_pass = json.loads(pass_logo_url.read())
   
