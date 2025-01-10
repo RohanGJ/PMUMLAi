@@ -99,7 +99,7 @@ def color_df(val):
 
 st.info("USER INPUTS :")
 st.dataframe(STDF.iloc[:,[0,1,2,3,4,5,6,15]].style.applymap(color_df))
-st.dataframe(STDF.iloc[:,7:-1].styler.map(color_df))
+st.dataframe(STDF.iloc[:,7:-1].Styler.map(color_df))
 #st.write(STDF[:][:8])
 
 pred = []
