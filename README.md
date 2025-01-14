@@ -3,8 +3,8 @@
 ## App Link
 [Click here to open the streamlit APP](https://pmumlai.streamlit.app)
 
-Directory structure:
-└── RohanGJ-PMUMLAi/
+## Directory structure:
+###└── RohanGJ-PMUMLAi/
     ├── README.md
     ├── requirements.txt
     ├── streamlit_app.py
@@ -24,4 +24,4 @@ Directory structure:
     ├── .devcontainer /
     │   └── devcontainer.json
     └── .streamlit/
-        └── config.toml
+        └── config.toml###
