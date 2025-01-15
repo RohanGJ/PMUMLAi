@@ -28,15 +28,12 @@ This repository contains a machine learning model that predicts whether a machin
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/Preventive-Maintenance.git
+   git clone https://github.com/RohanGJ/PMUMLAi.git
    ```
 2. Navigate to the project directory:
-   ```bash
-   cd Preventive-Maintenance
-   ```
 3. Install the required dependencies:
    ```bash
-   pip install -r requirements.txt
+   Can be found as the first cell in the .ipynb file
    ```
 4. Open the `.ipynb` file in JupyterLab, VSCode, or Google Colab to get started.
 
