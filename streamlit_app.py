@@ -22,7 +22,7 @@ def load_model_from_github(url):
 model = load_model_from_github(pickle_url)
 
 st.title('Machine Failure Predictor')
-st.info("Preventine Maintanance")
+st.info("An intelligent app that predicts potential machine failures by analyzing wear and tear patterns using live data, enabling timely maintenance and reducing downtime.")
 
 E1C,E2C,E3C,E4C,E5C = 0,0,0,0,0
 
