@@ -21,7 +21,7 @@ def load_model_from_github(url):
 
 model = load_model_from_github(pickle_url)
 
-st.title('MACHINE LEARNING')
+st.title('LUMINAR')
 st.info("Preventine Maintanance")
 
 E1C,E2C,E3C,E4C,E5C = 0,0,0,0,0
